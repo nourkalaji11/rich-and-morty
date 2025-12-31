@@ -14,6 +14,7 @@ dependencies:
   flutter_offline: ^6.0.0
   dio: ^5.9.0
   flutter_bloc: ^9.1.1
+  flutter_launcher_icons: ^0.14.4
 
 dev_dependencies:
   flutter_test:
@@ -25,3 +26,8 @@ flutter:
 
   assets:
     - assets/images/
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/photo_2025-12-30_17-29-47.jpg"

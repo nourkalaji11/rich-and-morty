@@ -3,8 +3,9 @@ import 'package:rick_and_morty/constant/colors.dart';
 import 'package:rick_and_morty/data/models/character_model.dart';
 
 class CharacterDetailesScreen extends StatelessWidget {
-  const CharacterDetailesScreen({super.key, required this.character});
+   CharacterDetailesScreen({super.key, required this.character});
   final Result character;
+
 
   Widget buildSliverAppBar() {
     return SliverAppBar(
@@ -61,6 +62,8 @@ class CharacterDetailesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth=MediaQuery.of(context).size.width;
+    final screenHeight=MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: MyColors.grey,
       body: CustomScrollView(
@@ -97,7 +100,7 @@ class CharacterDetailesScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                const SizedBox(height: 500) // For scroll padding
+                const SizedBox(height: 400) // For scroll padding
               ],
             ),
           )
