@@ -45,14 +45,19 @@ class CharacterItem extends StatelessWidget {
               tag: character.id,
               child: Container(
                 color: MyColors.grey,
-                child: character.image.isNotEmpty
-                    ? FadeInImage.assetNetwork(
+                child: character.image.isNotEmpty?
+                // const Center(
+                //     child: CircularProgressIndicator(
+                //       backgroundColor:MyColors.grey ,
+                //       color: MyColors.yellow,
+                //     ),)
+                     FadeInImage.assetNetwork(
                         // Corrected the placeholder image path
-                        placeholder: 'assets/images/Spinner@1x-1.0s-200px-200px.png',
+                        placeholder: 'assets/images/Spinner@1x-1.0s-200px-200px (2).gif',
                         image: character.image,
                         fit: BoxFit.cover,
                       )
-                    // Corrected the fallback image path
+
                     : Image.asset('assets/images/download.png'),
               ),
             ),
